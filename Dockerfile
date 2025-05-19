@@ -1,4 +1,4 @@
-FROM nvidia/cuda:12.6.0-runtime-ubuntu22.04 AS base
+FROM nvidia/cuda:12.9.0-cudnn-runtime-ubuntu24.04 AS base
 
 # Set environment variables
 ENV PYTHONDONTWRITEBYTECODE=1 \
@@ -9,13 +9,14 @@ ENV PYTHONDONTWRITEBYTECODE=1 \
 
 # Install Python and system dependencies
 RUN apt-get update && apt-get install -y --no-install-recommends \
-    python3.10 \
+    python3.12 \
     python3-pip \
     python3-venv \
     python3-dev \
     build-essential \
     git \
     curl \
+    nano \
     wget \
     && apt-get clean \
     && rm -rf /var/lib/apt/lists/* \
