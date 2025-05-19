@@ -1,4 +1,4 @@
-FROM nvidia/cuda:12.9.0-cudnn-runtime-ubuntu24.04 AS base
+FROM nvidia/cuda:12.8.1-cudnn-runtime-ubuntu24.04 AS base
 
 # Set environment variables
 ENV PYTHONDONTWRITEBYTECODE=1 \
